@@ -7,7 +7,7 @@ const User  = (props) => {
           props.selectUser(props.index)
         }}>
         <figure className="user-profile-photo">
-          <img src="http://placehold.it/50x50"/>
+          <img src="https://i.pravatar.cc/50"/>
         </figure>
         <div className="user-details">
           <span className="user-name">  { props.data.username }</span>

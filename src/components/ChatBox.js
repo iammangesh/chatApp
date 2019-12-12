@@ -6,7 +6,8 @@ import {data} from './data';
 class ChatBox extends React.Component {
   state = {
     users:data,
-    seletedUser:data[0]
+    seletedUser:data[0],
+    selectedIndex:0
   }
 
   setSeletedUser = (index) => {
@@ -21,7 +22,7 @@ class ChatBox extends React.Component {
       <React.Fragment>
         <section className="chat-box">
           <div className="chat-box-col">
-            <UsersList active={this.state.index} users={this.state.users} selectUser={this.setSeletedUser}/>
+            <UsersList active={this.state.selectedIndex} users={this.state.users} selectUser={this.setSeletedUser}/>
           </div>
           <div className="chat-box-col">
             <ChatMessages data={this.state.seletedUser}/>

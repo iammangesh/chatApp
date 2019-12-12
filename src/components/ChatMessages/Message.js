@@ -7,7 +7,7 @@ const Message  = (props) => {
         <span className="message-time">{ props.data.message_time }</span>
         <div className="message-wrap">
           <figure className="message-photo">
-            <img src="http://placehold.it/40x40" alt="message"/>
+            <img src="https://i.pravatar.cc/40" alt="message"/>
           </figure>
           <div className="message-text">
             { props.data.message_text }

@@ -6,8 +6,8 @@ class MessageInput  extends React.Component {
     return(
       <React.Fragment>
       <div className="list-head">
-        <h2>type message here</h2>
-        <a href="#" className="icon"></a>
+        <textarea> </textarea>
+        <a href="#" className="icon">Send</a>
       </div>
       </React.Fragment>
     );
