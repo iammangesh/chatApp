@@ -13,7 +13,7 @@ const ChatMessages = (props) =>  {
                 props.data.messages != undefined && props.data.messages.map((item,index) => <Message key={index} data={item}/>)
               }
             </div>
-            <MessageInput/>
+            <MessageInput sendMessage={props.sendMessage}/>
           </div>
         </React.Fragment>
       );
