@@ -10,7 +10,7 @@ class UserList extends React.Component {
         <ListHeader title="lorem ipsum"/>
         <div className="user-list">
           {
-            this.props.users != undefined && this.props.users.map((item,index) => <User key={index} data={item}/>)
+            this.props.users != undefined && this.props.users.map((item,index) => <User key={index} index={index} active={this.props.active}   selectUser={this.props.selectUser} data={item}/>)
           }
         </div>
       </React.Fragment>

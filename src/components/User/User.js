@@ -3,7 +3,9 @@ import React from 'react';
 const User  = (props) => {
   return(
     <React.Fragment>
-      <div className="user-item">
+      <div className={props.active == props.index ? 'user-item selected' : 'user-item'} onClick={() => {
+          props.selectUser(props.index)
+        }}>
         <figure className="user-profile-photo">
           <img src="http://placehold.it/50x50"/>
         </figure>

@@ -9,15 +9,19 @@ class ChatBox extends React.Component {
     seletedUser:data[0]
   }
 
-  setSeletedUser = (id) => {
-
+  setSeletedUser = (index) => {
+    debugger;
+    this.setState({
+      seletedUser:this.state.users[index],
+      selectedIndex:index
+    });
   }
   render() {
     return(
       <React.Fragment>
         <section className="chat-box">
           <div className="chat-box-col">
-            <UsersList users={this.state.users} selectUser={this.setSeletedUser}/>
+            <UsersList active={this.state.index} users={this.state.users} selectUser={this.setSeletedUser}/>
           </div>
           <div className="chat-box-col">
             <ChatMessages data={this.state.seletedUser}/>
