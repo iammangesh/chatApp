@@ -1,0 +1,26 @@
+
+
+.chat-box {
+  width:70%;
+  min-width: 900px;
+  height: 550px;
+  margin:auto;
+  box-shadow:0 0 0.8rem 0 rgba(0,0,0,0.2);
+  @extend %d-flex;
+
+  .chat-box-col {
+  }
+
+  .chat-box-col:first-child {
+    flex:0 0 40%;
+    width:40%;
+    max-width: 40%;
+  }
+  .chat-box-col:last-child {
+    flex:0 0 60%;
+    width:60%;
+    max-width: 60%;
+    background: var(--theme-color-gray);
+    align-self: stretch;
+  }
+}

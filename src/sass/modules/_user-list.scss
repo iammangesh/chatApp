@@ -1,0 +1,81 @@
+
+.list-head {
+  padding:$padding;
+  @extend %d-flex;
+  @extend %f-justify-space-between;
+  background: var(--theme-color-light);
+  h2 {
+    font-weight: 600;
+    font-size: 1.2rem;
+  }
+
+}
+
+.user-list {
+  max-height:calc(100% - 3rem);
+  overflow-y: auto;
+
+}
+
+
+.user-item {
+  padding:1.2rem $padding;
+  @extend %d-flex;
+  @extend %f-align-center;
+  cursor: pointer;
+  background: var(--theme-color-light);
+  transition: background 300ms ease-in-out;
+  .user-profile-photo {
+    flex:0 0 3rem;
+    width:3rem;
+    margin-right:0.5rem;
+    img {
+      border-radius: 50%;
+      width:3rem;
+      height:3rem;
+      margin:0 auto;
+    }
+  }
+  .user-details {
+
+    flex: 0 0 calc(100% - 6rem);
+    width:calc(100% - 6rem);
+    max-width: calc(100% - 6rem);
+
+    span {
+      display: block;
+    }
+    .user-name {
+      font-weight:600;
+      color:var(--font-color-dark);
+      margin-bottom:0.3rem;
+    }
+    .user-last-message {
+      font-size: 0.8rem;
+      color:var(--font-color-light);
+       @extend %ellipsis;
+    }
+  }
+  .user-meta-data {
+    align-self: flex-start;
+    flex:1 1 3rem;
+    width:3rem;
+    max-width: 3rem;
+    text-align: right;
+    font-size: 0.8rem;
+  }
+  &.selected {
+    background: var(--theme-color-highlight);
+    .user-details  {
+      .user-name , .user-last-message {
+        color:var(--font-color-white);
+      }
+    }
+    .user-meta-data {
+      color:var(--font-color-white)
+    }
+  }
+  &:not(.selected):hover  {
+    background:lighten(#f6f6f6,10);
+  }
+}

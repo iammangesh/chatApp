@@ -1,0 +1,32 @@
+
+%d-flex {
+  display: flex;
+}
+
+%d-inline-flex {
+  display: inline-flex;
+}
+
+%f-align-center {
+  align-items: center;
+}
+
+%f-justify-center {
+  justify-content: center;
+}
+
+%f-justify-space-between {
+  justify-content: space-between;
+}
+
+%card {
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  border-radius:.8rem;
+}
+
+%ellipsis {
+  max-width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

@@ -1,0 +1,18 @@
+
+
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: 'Nunito', sans-serif;
+  line-height: 1;
+  overflow-x: hidden;
+  background: #f5f5f5;
+}
+
+
+.app {
+  height:100vh;
+  @extend %d-flex;
+}
